@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    var number = 10;//60 seconds to play the entire game
+    var number = 60;//60 seconds to play the entire game
     var i = -1;//because the starGame function has i++, which brings us to 0, referencing the first array position
     var intervalId;//holds the setInterval so that it can be cleared
     var winner = 0;//keeps count of the number of correct answers
