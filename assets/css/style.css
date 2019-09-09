@@ -1,0 +1,53 @@
+
+.jumbotron {
+    margin-bottom: 7px;
+    background-image: url(../images/header_background.png)
+}
+
+.display-4 {
+    font-size: 80px;
+    text-align: center;
+}
+
+#mainBody {
+    height: 900px;
+}
+
+.card {
+   background-image: url(../images/body_background.png);
+   text-align: center;
+   height: 700px;
+}
+
+.timeHeading {
+    margin-top: 20px;
+    font-size: 36px;
+}
+
+.card-header {
+    font-size: 36px;
+}
+
+.card-title {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.card-text {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+#startButton {
+    height: 75px;
+    width: 250px;
+    font-size: 36px;
+    margin-top: 45px;
+    margin-bottom: 200px;
+    background-image: url(../images/button_background.jpg);
+}
+
+#buttonFooter {
+    height: 150px;
+    background-image: url(../images/footer_background.png);
+}
