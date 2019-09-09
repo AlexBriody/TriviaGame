@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    var number = 60;//60 seconds
+    var number = 10;//60 seconds to play the entire game
     var i = -1;//because the starGame function has i++, which brings us to 0, referencing the first array position
     var intervalId;//holds the setInterval so that it can be cleared
     var winner = 0;//keeps count of the number of correct answers
@@ -72,8 +72,9 @@ $(document).ready(function () {
     }
 
     function sevenSeconds() {
+            $("#row2").html("&nbsp");
             $("#row3,#row4,#row5").text("");
-            $("#row2").text("You failed to give an answer in time.");
+            $("#row3").text("You failed to give an answer in time.");
             nextQuestion = setTimeout(threeSeconds, 3000);//holds the setTimeout function so it can be cleared; and allows the failure message to be seen for 3 seconds
     }
 
@@ -97,10 +98,10 @@ $(document).ready(function () {
         clearTimeout(noAnswer);//clears 7 second timer
         clearTimeout(nextQuestion);//clears 3 second timer
         $("#row1").text("Game Over!");
-        $("#row2").text("Number of correct answers: " + winner);
-        $("#row3").text("Number of incorrect answers: " + loser);
-        $("#row4").text("Number of unanswered questions: " + questionsLeft);
-        $("#row5").text("");
+        $("#row2").text("# of correct answers: " + winner);
+        $("#row3").text("# of incorrect answers: " + loser);
+        $("#row4").text("# of questions unanswered: " + questionsLeft);
+        $("#row5").text("Click 'Start Game' to replay");
         number = 60;//sets up for next game
         winner = 0;//sets up for next game
         loser = 0;//sets up for next game
@@ -137,15 +138,17 @@ $(document).ready(function () {
     $("#row2,#row3,#row4,#row5").on("click", function () {
 
         function displayWinnerMessage() {
-            $("#row3,#row4,#row5").text("");
-            $("#row2").text("Correct Answer!");
+            $("#row2").html("&nbsp");//to skip a line
+            $("#row3,#row4,#row5").text("");//to clear text
+            $("#row3").text("Correct Answer!");
             winner++;
         }
 
         function displayLoserMessage() {
-            $("#row3,#row4,#row5").text("");
-            $("#row2").text("Incorrect Answer!");
-            $("#row3").append("The correct answer is " + questionBank[i].answer + ".");
+            $("#row2").html("&nbsp");//to skip a line
+            $("#row3,#row4,#row5").text("");//to clear text
+            $("#row3").text("Incorrect Answer!");
+            $("#row4").append("The correct answer is " + questionBank[i].answer + ".");
             loser++;
         }
         

@@ -5,7 +5,8 @@
 }
 
 .display-4 {
-    font-size: 80px;
+    font-size: 100px;
+    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
 }
 
@@ -30,7 +31,8 @@
 }
 
 .card-title {
-    font-size: 30px;
+    font-size: 50px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin-bottom: 20px;
 }
 
@@ -43,7 +45,7 @@
     height: 75px;
     width: 250px;
     font-size: 36px;
-    margin-top: 45px;
+    margin-top: 37px;
     margin-bottom: 200px;
     background-image: url(../images/button_background.jpg);
 }
@@ -51,4 +53,15 @@
 #buttonFooter {
     height: 150px;
     background-image: url(../images/footer_background.png);
+    border: 2px solid black;
+}
+
+#happydog {
+    width: 200px;
+    height: 200px;
+    border: 2px solid darkblue;
+    position: relative;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 20px;
 }
